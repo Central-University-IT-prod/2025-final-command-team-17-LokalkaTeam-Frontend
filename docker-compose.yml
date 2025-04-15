@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - '8050:8050'
+    environment:
+      NODE_ENV: production
+      PORT: 8050
+    restart: always
